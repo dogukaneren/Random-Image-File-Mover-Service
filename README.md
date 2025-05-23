@@ -19,3 +19,12 @@ It supports both **fixed interval and count** or a fully **randomized mode**.
 ```bash
 sudo cp random-image-sender.sh /usr/local/bin/
 sudo chmod +x /usr/local/bin/random-image-sender.sh
+
+sudo cp random-image-sender.service /etc/systemd/system/
+
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl enable random-image-sender.service
+
+sudo systemctl start random-image-sender.service
+```
