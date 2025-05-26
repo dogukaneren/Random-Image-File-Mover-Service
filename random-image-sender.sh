@@ -65,7 +65,7 @@ while true; do
     fi
 
     find "$SOURCE_DIR" -maxdepth 1 -type f -iname "*.jpg" | head -n "$count" | while read -r file; do
-        mv "$file" "$DEST_DIR"
+        cp "$file" "$DEST_DIR"
     done
 
     sleep "$time_interval"
